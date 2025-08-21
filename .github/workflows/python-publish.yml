@@ -27,12 +27,14 @@ jobs:
           python-version: "3.x"
 
       - name: Build release distributions
+        working-directory: Thimie
         run: |
           # NOTE: put your own distribution build steps here.
           python -m pip install build
           python -m build
 
       - name: Upload distributions
+        working-directory: Thimie
         uses: actions/upload-artifact@v4
         with:
           name: release-dists
@@ -59,12 +61,14 @@ jobs:
 
     steps:
       - name: Retrieve release distributions
+        working-directory: Thimie
         uses: actions/download-artifact@v4
         with:
           name: release-dists
           path: dist/
 
       - name: Publish release distributions to PyPI
+        working-directory: Thimie
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
