@@ -1,0 +1,33 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/data/positions.csv
+index 0000000000000000000000000000000000000000..fe6ffffbd4ef301a53f0d5b954c12add5bf5bc43 100644
+--- a//dev/null
++++ b/data/positions.csv
+@@ -0,0 +1,24 @@
++Ticker,Name,Value,M,ReqAmt,SafeLoan_per_position
++WMT,Walmart Inc,52.49,0.3,15.747,28.26384615
++EWS,iShares MSCI Singapore ETF,50.17,0.25,12.5425,30.102
++JMIA,Jumia Technologies,705.19,0.6,423.114,176.2975
++BTBT,Bit Digital,270.48,1,270.48,0
++HESM,Hess Midstream LP,418.78,0.3,125.634,225.4969231
++PFE,Pfizer Inc,350.32,0.3,105.096,188.6338462
++CAT,Caterpillar Inc,331.16,0.3,99.348,178.3169231
++SHOC,Strive U.S. Semiconductor ETF,94.1,1,94.1,0
++EXC,Exelon Corp,276.02,0.3,82.806,148.6261538
++TU,Telus Corp,224.17,0.3,67.251,120.7069231
++QSR,Restaurant Brands Intl,221.37,0.3,66.411,119.1992308
++BCDF,Horizon Kinetics Fund,63.06,1,63.06,0
++PSX,Phillips 66,181.44,0.3,54.432,97.69846154
++FSM,Fortuna Mining,127.62,0.42,53.6004,52.12647887
++POAI,Predictive Oncology,53.1,1,53.1,0
++RITM,Rithm Capital,176.48,0.3,52.944,95.02769231
++BLMN,Bloomin' Brands,86.16,0.6,51.696,21.54
++CVS,CVS Health,165.33,0.3,49.599,89.02384615
++XOM,Exxon Mobil,128.79,0.3,38.637,69.34846154
++DSU,BlackRock Debt Strategies,52.5,0.54,28.35,15.68181818
++BIT,BlackRock Multi-Sector Income,55.6,0.36,20.016,26.16470588
++WASH,Washington Trust Bancorp,49.27,0.35,17.2445,23.72259259
++CNQ,Canadian Natural Resources,55.84,0.3,16.752,30.06769231
+ 
+EOF
+)
